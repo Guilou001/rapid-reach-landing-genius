@@ -22,7 +22,7 @@ const steps = [
 
 const Process = () => {
   return (
-    <section id="process" className="py-24 bg-secondary/20">
+    <section id="process" className="py-24 bg-white/50 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary-dark mb-4">
@@ -47,12 +47,12 @@ const Process = () => {
               >
                 <div className="flex-1" />
                 
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg">
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-primary hover:scale-110 transition-transform duration-300 flex items-center justify-center shadow-lg hover:shadow-primary/30">
                   <Check className="h-6 w-6 text-white" />
                 </div>
                 
                 <div className="flex-1">
-                  <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-2px] border border-primary/10">
                     <h3 className="text-xl font-semibold text-secondary-dark mb-2">
                       {step.title}
                     </h3>

@@ -28,7 +28,7 @@ const blogPosts = [
 
 const Blog = () => {
   return (
-    <section id="blog" className="py-24 bg-secondary">
+    <section id="blog" className="py-24 bg-white/50 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-4xl font-bold text-secondary-dark mb-4">
@@ -40,11 +40,17 @@ const Blog = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post) => (
-            <Card key={post.id} className="group hover:shadow-lg transition-shadow duration-300 animate-fade-up">
+          {blogPosts.map((post, index) => (
+            <Card 
+              key={post.id} 
+              className="group hover:shadow-lg transition-all duration-300 animate-fade-up bg-white/80 backdrop-blur-sm border-primary/10 hover:scale-105"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
               <CardHeader>
                 <div className="mb-4 flex justify-between items-center">
-                  <Mail className="text-primary h-8 w-8" />
+                  <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                    <Mail className="text-primary h-6 w-6" />
+                  </div>
                   <div className="text-sm text-gray-500">{post.readTime}</div>
                 </div>
                 <CardTitle className="group-hover:text-primary transition-colors duration-300">
@@ -58,7 +64,7 @@ const Blog = () => {
                 <p className="text-gray-600">
                   {post.description}
                 </p>
-                <button className="mt-4 text-primary hover:text-primary-dark transition-colors duration-300 text-sm font-medium">
+                <button className="mt-4 text-primary hover:text-primary-dark transition-colors duration-300 text-sm font-medium group-hover:translate-x-2 transition-transform">
                   Lire l'article →
                 </button>
               </CardContent>
