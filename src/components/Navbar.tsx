@@ -38,6 +38,9 @@ const Navbar = () => {
               <a href="#testimonials" className="text-secondary-dark hover:text-primary transition-colors">
                 Témoignages
               </a>
+              <a href="#blog" className="text-secondary-dark hover:text-primary transition-colors">
+                Blog
+              </a>
               <Button onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}>
                 Prendre RDV
               </Button>
@@ -79,6 +82,13 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Témoignages
+            </a>
+            <a
+              href="#blog"
+              className="block px-3 py-2 text-secondary-dark hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blog
             </a>
             <Button
               className="w-full mt-4"
