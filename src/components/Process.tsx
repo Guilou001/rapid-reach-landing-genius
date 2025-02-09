@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const processDetails = [
   {
@@ -105,10 +105,6 @@ const Process = () => {
                       </div>
                     )}
                   </div>
-                  
-                  {index < processDetails.length - 1 && (
-                    <ArrowRight className="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 text-primary" size={24} />
-                  )}
                 </div>
               </div>
             </div>
