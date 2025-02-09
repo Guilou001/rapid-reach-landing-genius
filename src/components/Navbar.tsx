@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <span className="text-2xl font-bold text-secondary-dark">
+            <span className="text-2xl font-bold text-primary">
               Rapid Reach
             </span>
           </div>
@@ -78,9 +78,10 @@ const Navbar = () => {
       </div>
 
       <div 
-        className={`md:hidden fixed inset-0 bg-white transform transition-transform duration-300 ease-in-out ${
+        className={`md:hidden fixed inset-0 top-16 bg-white transform transition-transform duration-300 ease-in-out ${
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
+        style={{ height: 'calc(100vh - 4rem)' }}
       >
         <div className="px-2 pt-20 pb-3 space-y-3">
           <a
