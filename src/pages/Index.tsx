@@ -6,6 +6,7 @@ import Process from "@/components/Process";
 import Testimonials from "@/components/Testimonials";
 import Blog from "@/components/Blog";
 import Booking from "@/components/Booking";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
       <Testimonials />
       <Blog />
       <Booking />
+      <Footer />
     </div>
   );
 };
